@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InfoActivty">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/_10sdp"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_10sdp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="@dimen/_10sdp"
+            android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="@dimen/_10sdp"
+            android:orientation="horizontal"/>
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageView"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:alpha="0.2"-->
+        <!--            android:scaleType="fitXY"-->
+        <!--            android:src="@drawable/depression_detection_background"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pre-diagnostic Test"
+            android:textSize="@dimen/_26sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@id/gd1"
+            app:layout_constraintTop_toTopOf="@id/gd2" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="This is a Preliminary diagnostic test contaning 9 Objective Questions followed by 2 Subjective Questions.\n\nYou have to answer them correctly for good final diagnosis."
+            android:textSize="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:onClick="btnNext"
+            android:layout_margin="@dimen/_15sdp"
+            android:text="Start test"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            app:layout_constraintBottom_toBottomOf="@id/gd4"
+            app:layout_constraintEnd_toEndOf="@id/gd3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

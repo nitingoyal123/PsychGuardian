@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".CreateProfileActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="10dp"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="10dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="10dp"
+        android:orientation="horizontal"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gd4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="10dp"
+        android:orientation="horizontal"/>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:text="You have to create profile first..."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_25ssp"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toTopOf="@id/gd2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="@dimen/_230sdp"
+            android:layout_height="@dimen/_230sdp"
+            app:cardCornerRadius="@dimen/_115sdp"
+            android:layout_marginTop="@dimen/_70sdp"
+            app:cardElevation="@dimen/_4sdp"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dummy" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/button_shape"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_25sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:text="Create Profile"
+            android:onClick="btnCreateProfile"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+</layout>

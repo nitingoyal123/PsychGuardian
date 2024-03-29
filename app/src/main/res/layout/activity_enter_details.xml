@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EnterDetailsActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="10dp"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="10dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="10dp"
+            android:orientation="horizontal"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gd4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_end="10dp"
+            android:orientation="horizontal"/>
+
+
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/imageView"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:alpha="0.2"-->
+        <!--            android:scaleType="fitXY"-->
+        <!--            android:src="@drawable/depression_detection_background"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        <TextView
+            android:id="@+id/txtEnterDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:text="Enter Details"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toTopOf="@id/gd2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/edtNameLayout"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/txtEnterDetails">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:textSize="23sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtAgeLayout"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/edtNameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Age"
+                android:inputType="number"
+                android:textSize="23sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtPhoneNumberLayout"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/edtAgeLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textSize="23sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="0dp"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/gd3"
+            app:layout_constraintStart_toStartOf="@+id/gd1"
+            app:layout_constraintTop_toBottomOf="@id/edtPhoneNumberLayout">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="19sp"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="19sp"/>
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbOther"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textSize="19sp"/>
+
+        </RadioGroup>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/btnSave"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:onClick="btnNextClicked"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="29sp"
+            app:layout_constraintBottom_toBottomOf="@+id/gd4"
+            app:layout_constraintEnd_toEndOf="@id/gd3"
+            app:layout_constraintStart_toStartOf="@id/gd1"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupGender" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

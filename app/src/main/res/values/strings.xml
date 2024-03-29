@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Detect Depression SE Project</string>
+    <string name="nearly_everyday">Nearly everyday</string>
+    <string name="more_than_half_the_days">More than half the days</string>
+    <string name="several_days">Several days</string>
+    <string name="not_at_all">Not at all</string>
+</resources>
